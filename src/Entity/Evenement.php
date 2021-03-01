@@ -42,22 +42,22 @@ class Evenement
     private $adresse;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", nullable=true)
      */
     private $longitude;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float" , nullable=true)
      */
     private $latitude;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $nbrePlace;
 
@@ -154,6 +154,23 @@ class Evenement
     {
         return $this->nbrePlace;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
 
     public function setNbrePlace(string $nbrePlace): self
     {

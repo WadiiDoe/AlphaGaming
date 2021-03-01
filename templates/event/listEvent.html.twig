@@ -1,0 +1,19 @@
+<table>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Prix</th>
+    <th>Adresse</th>
+    {% for l in listStudent %}
+    <tr>
+        <td>{{ l.id }}</td>
+        <td>{{l.nom  }}</td>
+        <td>{{ l.date|date('d-m-Y') }}</td>
+        <td>{{ l.description }}</td>
+        <td>{{ l.prix }}</td>
+        <td>{{ l.adresse }}</td>
+        <td> <a href="{{path('evenement',{'id':l.id }) }}">Afficher</a></td>
+    </tr>
+    {% endfor %}
+</table>
