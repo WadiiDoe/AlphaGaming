@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>{{ form_title }}</h1>
+    {{ form_start (form_post) }}
+
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form_post) }}
+    </div>
+
+    <div class="form-group row align-items-center">
+        <label class="col-3">Titre post</label>
+        {{ form_widget(form_post.titre_post) }}
+        <br><small> {{ form_errors(form_post.titre_post) }}</small>
+    </div>
+    <div class="form-group row align-items-center">
+        <label class="col-3">Sujet</label>
+        {{ form_widget(form_post.sujet) }}
+        <br><small> {{ form_errors(form_post.sujet) }}</small>
+    </div>
+
+
+    {{ form_widget(form_post.submit, {'attr': {'class': 'btn btn-info'}}) }}
+    {{ form_widget(form_post.reset, {'attr': {'class': 'btn btn-dark'}}) }}
+
+    {{ form_end(form_post) }}
+{% endblock %}
