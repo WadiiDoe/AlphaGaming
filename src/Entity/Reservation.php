@@ -10,31 +10,69 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Reservation
 {
-
     /**
      * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $user;
+    private $id;
+
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $event;
+    private $iduser;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $idevent;
+    /**
+     * @ORM\Column(type="integer", length=255)
+     */
+    private $nbrplace;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUser(): ?int
+    public function getIduser(): ?string
     {
-        return $this->user;
+        return $this->iduser;
     }
 
-    public function setUser(string $user): self
+    public function setIduser(string $iduser): self
     {
-        $this->user = $user;
+        $this->iduser = $iduser;
 
         return $this;
+    }
+
+    public function getIdevent(): ?string
+    {
+        return $this->idevent;
+    }
+
+    public function setIdevent(string $idevent): self
+    {
+        $this->idevent = $idevent;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbrplace()
+    {
+        return $this->nbrplace;
+    }
+
+    /**
+     * @param mixed $nbrplace
+     */
+    public function setNbrplace($nbrplace): void
+    {
+        $this->nbrplace = $nbrplace;
     }
 }

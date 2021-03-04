@@ -4,11 +4,17 @@ namespace App\Controller;
 
 use App\Entity\Evenement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Asset\Package;
+
+
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -31,7 +37,7 @@ class EventController extends AbstractController
         $listEvent=$this->getDoctrine()->getRepository(Evenement::class)->findAll();
 
         return $this->render('event/listEvent.html.twig', [
-            'listStudent' => $listEvent
+            'listEvent' => $listEvent
         ]);
 
     }
@@ -58,11 +64,31 @@ class EventController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $evenement = new Evenement();
-        $form = $this->createFormBuilder($evenement)->add('nom', TextType::class)->add('description', TextType::class)->add('adresse', TextType::class)->add('prix', TextType::class)->add('date', DateType::class)->add('Ajouter', SubmitType::class, ['label' => 'Ajouter'])->getForm();
+        $form = $this->createFormBuilder($evenement)
+            ->add('nom', TextType::class)
+            ->add('description', TextType::class)
+            ->add('adresse', TextType::class)
+            ->add('prix', TextType::class)
+            ->add('nbrePlace', TextType::class)
+            ->add('date', DateType::class)
+            ->add('image', FileType::class)
+            ->add('Ajouter', SubmitType::class, ['label' => 'Ajouter'])
+            ->getForm();
         $form->handleRequest($req);
         if ($form->isSubmitted()) {
+            $file=$evenement->getImage();
+            $fileName=md5(uniqid()).'.'.$file->guessExtension();
             $evenement = $form->getData();
             $em = $this->getDoctrine()->getManager();
+            $evenement->setImage($fileName);
+            try{
+                $file->move(
+                    $this->getParameter('EventImage_directory'),
+                    $fileName
+                );
+
+            }
+            catch (FileNotFoundException $e){}
             $em->persist($evenement);
             $em->flush();
             return $this->redirectToRoute('listEvent');
@@ -72,5 +98,39 @@ class EventController extends AbstractController
 
         ]);
         }
+        /**
+         * @param $id
+         * @Route("/supprimerevent/{id}",name="supprimerevent")
+         */
+    public function supprimer($id)
+    {
+        $em= $this->getDoctrine()->getManager();
+        $evenement=$em->getRepository( Evenement::class)->find($id);
+        $em->remove($evenement);
+        $em->flush();
+        return $this->redirectToRoute( "listEvent");
 
+    }
+    /**
+     * @Route("/modifierEvent/{id}", name="modifierEvent")
+     */
+    public function modifierEvent( Request $req , $id){
+        $evenement = $this->getDoctrine()->getRepository(Evenement::class)->find($id);
+
+        $form = $this->createFormBuilder ($evenement)
+            ->add('nom', TextType::class)
+            ->add('description', TextType::class)
+            ->add('adresse', TextType::class)
+            ->add('prix', TextType::class)
+            ->add('date', DateType::class)
+            ->add('modifier',SubmitType::class ,['label'=> 'Modifier'])
+            ->getForm();
+        $form ->handleRequest($req);
+        if ($form->isSubmitted()){
+            $entity = $this->getDoctrine()->getManager();
+            $entity->flush();
+            return $this->redirectToRoute('listEvent');
+        }
+        return $this->render('event/modifierEvent.html.twig' , [ 'form' => $form->createView()]);
+    }
 }
