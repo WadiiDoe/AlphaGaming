@@ -41,6 +41,18 @@ class EventController extends AbstractController
         ]);
 
     }
+    /**
+     * @Route("/listEventBack", name="listEventBack")
+     */
+    public function listEventBack(){
+
+        $listEvent=$this->getDoctrine()->getRepository(Evenement::class)->findAll();
+
+        return $this->render('event/listEventBack.html.twig', [
+            'listEvent' => $listEvent
+        ]);
+
+    }
 
     /**
      * @route("/evenement/{id}", name="evenement")
@@ -72,7 +84,6 @@ class EventController extends AbstractController
             ->add('nbrePlace', TextType::class)
             ->add('date', DateType::class)
             ->add('image', FileType::class)
-            ->add('Ajouter', SubmitType::class, ['label' => 'Ajouter'])
             ->getForm();
         $form->handleRequest($req);
         if ($form->isSubmitted()) {
@@ -91,7 +102,7 @@ class EventController extends AbstractController
             catch (FileNotFoundException $e){}
             $em->persist($evenement);
             $em->flush();
-            return $this->redirectToRoute('listEvent');
+            return $this->redirectToRoute('listEventBack');
         }
 
         return $this->render('event/ajouterEvent.html.twig' , ['form' => $form->createView()
@@ -108,9 +119,10 @@ class EventController extends AbstractController
         $evenement=$em->getRepository( Evenement::class)->find($id);
         $em->remove($evenement);
         $em->flush();
-        return $this->redirectToRoute( "listEvent");
+        return $this->redirectToRoute( "listEventBack");
 
     }
+
     /**
      * @Route("/modifierEvent/{id}", name="modifierEvent")
      */
@@ -122,14 +134,14 @@ class EventController extends AbstractController
             ->add('description', TextType::class)
             ->add('adresse', TextType::class)
             ->add('prix', TextType::class)
+            ->add('nbrePlace', TextType::class)
             ->add('date', DateType::class)
-            ->add('modifier',SubmitType::class ,['label'=> 'Modifier'])
             ->getForm();
         $form ->handleRequest($req);
         if ($form->isSubmitted()){
             $entity = $this->getDoctrine()->getManager();
             $entity->flush();
-            return $this->redirectToRoute('listEvent');
+            return $this->redirectToRoute('listEventBack');
         }
         return $this->render('event/modifierEvent.html.twig' , [ 'form' => $form->createView()]);
     }

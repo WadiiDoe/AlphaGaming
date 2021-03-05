@@ -32,23 +32,35 @@ class ReservationController extends AbstractController
             $reservation = new Reservation();
             if($req->isMethod("post")) {
                 $reservation->setIduser("1");
-                $reservation->setIdevent($id);
-                $reservation->setNbrplace($req->get('nbrplace'));
+                $reservation->setIdevent($evenement);
+                $nbredeticketDemandé=(int)($req->get('nbrplace'));
+
+                if( $nbredeticketDemandé < $evenement->getNbrePlace()){
+                    $reservation->setNbrPlace($nbredeticketDemandé);
+                }
+                else {
+                    return $this->redirectToRoute('reserverEvent', array('id'=>$id));
+                }
                 try{
                     $em->persist($reservation);
                     $em->flush();
                     return $this->redirectToRoute('listEvent');
 
                 }catch(ExceptionInterface $e){
-                    $req->getSession()
-                        ->getFlashBag()
-                        ->add('error', 'Vous avez deja fait une reservation de cet evenement')
-                    ;
                 }
 
 
             }
 
         return $this->render('event/evenement.html.twig',array('evenement'=>$evenement));
+    }
+    /**
+     * @Route("/listreservation/{id}", name="afficherReservation")
+     */
+    public function listReservationByEvent($id){
+        $event=$this->getDoctrine()->getRepository(Evenement::class)->find($id);
+        $listReservation=$this->getDoctrine()->getRepository(Reservation::class)->findBy(array('idevent'=>$event));
+        return $this->render('event/listReservation.html.twig',array('reservations'=>$listReservation));
+
     }
 }

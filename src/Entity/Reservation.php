@@ -23,7 +23,8 @@ class Reservation
     private $iduser;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Evenement", inversedBy="Reservation")
+     * @ORM\JoinColumn(name="idevent", referencedColumnName="id",onDelete="CASCADE")
      */
     private $idevent;
     /**
@@ -48,12 +49,12 @@ class Reservation
         return $this;
     }
 
-    public function getIdevent(): ?string
+    public function getIdevent()
     {
         return $this->idevent;
     }
 
-    public function setIdevent(string $idevent): self
+    public function setIdevent( $idevent)
     {
         $this->idevent = $idevent;
 

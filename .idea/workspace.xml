@@ -21,135 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210228193832.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210301171918.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/Magnific-Popup-master.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/OwlCarousel2-2.3.4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/SlickNav-master.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/barfiller-master.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/bootstrap-4.2.1-dist.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/elegant_font.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/font-awesome-4.7.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/jquery-circle-progress-1.2.2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/Source/sass.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/categories-grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/categories-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/barfiller.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/elegant-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/slicknav.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/details-post-default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/details-post-gallery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/details-post-review.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/ElegantIcons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/ElegantIcons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/ElegantIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/ElegantIcons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/breadcrumb-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-grid/cg-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/categories-list/cl-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/author-pic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/comment/comment-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/comment/comment-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/comment/comment-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/details-post-review.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/details-post.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/dp-p.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/dp-p1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/gallery/gallery-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/next.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/details/prev.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/f-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/hero/hero-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/hero/hero-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/hero/hero-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/hero/meta-pic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/insta-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/insta-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/insta-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/insta-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/ip-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/ip-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/ip-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/instagram/ip-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/latest-preview/lp-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/latest-preview/lp-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/latest-preview/lp-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/latest-preview/lp-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/megamenu/mm-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/megamenu/mm-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/megamenu/mm-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/megamenu/mm-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/megamenu/mm-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/news/news-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/news/news-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/news/news-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/news/news-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/editor-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/editor-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/trending/trending-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/videos/videos-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/videos/videos-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/videos/videos-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/videos/videos-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/img/videos/videos-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/circle-progress.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/jquery.barfiller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/jquery.slicknav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/typography.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Evenement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReservationRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/listEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +186,7 @@
       <workItem from="1614701112113" duration="6202000" />
       <workItem from="1614717739895" duration="1724000" />
       <workItem from="1614789146047" duration="8186000" />
-      <workItem from="1614883305189" duration="15665000" />
+      <workItem from="1614883305189" duration="28896000" />
     </task>
     <servers />
   </component>
@@ -337,6 +214,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614793369331" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614912802695">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1614912802695" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614619429138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
