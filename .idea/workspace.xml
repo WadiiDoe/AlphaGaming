@@ -23,9 +23,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Evenement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/listEventBack.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEventBack.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/listReservation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listReservation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +188,13 @@
       <workItem from="1614701112113" duration="6202000" />
       <workItem from="1614717739895" duration="1724000" />
       <workItem from="1614789146047" duration="8186000" />
-      <workItem from="1614883305189" duration="28896000" />
+      <workItem from="1614883305189" duration="39628000" />
+      <workItem from="1615062094470" duration="296000" />
+      <workItem from="1615141199486" duration="6931000" />
+      <workItem from="1615212705331" duration="5168000" />
+      <workItem from="1615236337881" duration="2451000" />
+      <workItem from="1615291135271" duration="15267000" />
+      <workItem from="1615377832501" duration="1625000" />
     </task>
     <servers />
   </component>
@@ -206,10 +214,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1614884177442">
+    <state x="476" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1615293685270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="476" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614884177442" />
+    <state x="476" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1615293685270" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614793369331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -218,6 +226,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1614912802695" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1615307110508">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1615307110508" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614619429138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

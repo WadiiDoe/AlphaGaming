@@ -32,9 +32,31 @@ class Reservation
      */
     private $nbrplace;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $approuve;
+
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getApprouve()
+    {
+        return $this->approuve;
+    }
+
+    /**
+     * @param mixed $approuve
+     */
+    public function setApprouve($approuve): void
+    {
+        $this->approuve = $approuve;
     }
 
     public function getIduser(): ?string
@@ -61,6 +83,8 @@ class Reservation
         return $this;
     }
 
+
+
     /**
      * @return mixed
      */
@@ -68,6 +92,8 @@ class Reservation
     {
         return $this->nbrplace;
     }
+
+
 
     /**
      * @param mixed $nbrplace

@@ -91,6 +91,7 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ url('add_event') }}">Add Event</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ url('listEventBack') }}">List Event</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ url('listReservation') }}">All Reservations</a></li>
                     </ul>
                 </div>
             </li>
@@ -298,8 +299,8 @@
                 <div class="page-header">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Events</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">list Event</li>
+                            <li class="breadcrumb-item"><a href="#">Reservation By Event</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">list Reservation For this event</li>
                         </ol>
                     </nav>
                 </div>
@@ -318,6 +319,7 @@
                                         <th>Nombre de place</th>
                                         <th>Prix Total</th>
                                         <th>Image de l'evenement reservé</th>
+                                        <th>State</th>
 
                                     </tr>
                                     </thead>
@@ -327,9 +329,16 @@
                                             <td>{{ l.iduser }}</td>
                                             <td>{{ l.idevent.nom }}</td>
                                             <td> {{ l.nbrplace }} </td>
-                                            <td>{{ l.idevent.prix * l.nbrplace  }}  </td>
                                             <td>{{ l.idevent.prix * l.nbrplace  }} DT </td>
-                                            <td><img src=" {{ asset('Uploads/Image/' ~ l.idevent.image) }}" height="100" width="100" "></td>
+                                            <td><img src=" {{ asset('Uploads/Image/' ~ l.idevent.image) }}" class="img-lg" "></td>
+
+                                            {% if l.approuve ==1 %}
+                                               <td style="background-color: #0b2e13">Approuved</td>
+                                            {% elseif l.approuve==0 %}
+                                                <td style="background-color:red">Pending</td>
+                                            {% endif %}
+
+
 
                                         </tr>
                                     {% endfor %}

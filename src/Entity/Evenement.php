@@ -14,6 +14,7 @@ class Evenement
 {
     /**
      * @ORM\Id
+     *
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
@@ -21,15 +22,18 @@ class Evenement
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="veuillez remplir ce champs")
      */
     private $nom;
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime",nullable=true)
      */
     private $date;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="veuillez remplir ce champs")
+
      */
     private $description;
 

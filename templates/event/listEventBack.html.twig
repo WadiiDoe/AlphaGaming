@@ -91,6 +91,7 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ url('add_event') }}">Add Event</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ url('listEventBack') }}">List Event</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ url('listReservation') }}">All Reservations</a></li>
                     </ul>
                 </div>
             </li>
@@ -293,6 +294,7 @@
             </div>
         </nav>
         <!-- partial -->
+
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="page-header">
@@ -310,7 +312,9 @@
 
                             </p>
                             <div class="table-responsive">
-                                <table class="table table-hover">
+                                <script src="{{ asset('Backend/assets/js/jquery.min.js') }}"></script>
+                                <center><input type="text" id="search" placeholder="CHERCHER Evenement..."></center>
+                                <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                     <thead>
                                     <tr>
                                         <th>Id</th>
@@ -339,6 +343,35 @@
                                         <td><label class="badge badge-dark"><a href="{{ url('modifierEvent',{'id':l.id}) }}">modifier</a></label></td>
                                         <td><label class="badge badge-light"><a href="{{ url('afficherReservation',{'id':l.id}) }}">Reservations</a></label></td>
                                     </tr>
+                                        <script>
+                                            $(document).ready(function(){
+                                                $('#search').keyup(function(){
+                                                    search_table($(this).val());
+                                                });
+                                                function search_table(value){
+                                                    $('#tableac tbody tr').each(function(){
+                                                        var found = 'false';
+                                                        $(this).each(function(){
+                                                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                            {
+                                                                found = 'true';
+                                                            }
+                                                        });
+                                                        if(found == 'true')
+                                                        {
+                                                            $(this).show();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).hide();
+
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        </script>
+
 {% endfor %}
                                     </tbody>
                                 </table>

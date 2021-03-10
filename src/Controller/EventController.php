@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Asset\Package;
 
@@ -86,7 +86,7 @@ class EventController extends AbstractController
             ->add('image', FileType::class)
             ->getForm();
         $form->handleRequest($req);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $file=$evenement->getImage();
             $fileName=md5(uniqid()).'.'.$file->guessExtension();
             $evenement = $form->getData();
@@ -138,7 +138,7 @@ class EventController extends AbstractController
             ->add('date', DateType::class)
             ->getForm();
         $form ->handleRequest($req);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted()) {
             $entity = $this->getDoctrine()->getManager();
             $entity->flush();
             return $this->redirectToRoute('listEventBack');
