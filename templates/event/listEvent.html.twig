@@ -483,6 +483,10 @@ Additional Classes:
                         </div>
                     </div>
                     {% endfor %}
+                    <div class="nk-pagination nk-pagination-center">
+                        {{ knp_pagination_render(listEvent) }}
+
+                    </div>
                     <!-- END: Post -->
 
                     <!-- START: Post -->
@@ -517,7 +521,7 @@ Additional Classes:
 
 
                     <!-- START: Pagination -->
-                    <div class="nk-pagination nk-pagination-center">
+                   {# <div class="nk-pagination nk-pagination-center">
                         <a href="#" class="nk-pagination-prev">
                             <span class="ion-ios-arrow-back"></span>
                         </a>
@@ -532,7 +536,7 @@ Additional Classes:
                         <a href="#" class="nk-pagination-next">
                             <span class="ion-ios-arrow-forward"></span>
                         </a>
-                    </div>
+                    </div>#}
                     <!-- END: Pagination -->
                 </div>
                 <!-- END: Posts List -->

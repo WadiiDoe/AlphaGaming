@@ -313,7 +313,10 @@
                             </p>
                             <div class="table-responsive">
                                 <script src="{{ asset('Backend/assets/js/jquery.min.js') }}"></script>
-                                <center><input type="text" id="search" placeholder="CHERCHER Evenement..."></center>
+                                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                    <input type="text" id="search" class="form-control" placeholder="chercher events">
+                                </form>
+
                                 <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                     <thead>
                                     <tr>
@@ -372,7 +375,7 @@
                                             });
                                         </script>
 
-{% endfor %}
+                                     {% endfor %}
                                     </tbody>
                                 </table>
                             </div>

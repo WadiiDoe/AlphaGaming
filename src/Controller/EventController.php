@@ -3,7 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Evenement;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -18,7 +19,7 @@ use Symfony\Component\Asset\Package;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class EventController extends AbstractController
+class EventController extends Controller
 {
     /**
      * @Route("/event", name="event")
@@ -32,10 +33,19 @@ class EventController extends AbstractController
     /**
      * @Route("/listEvent", name="listEvent")
      */
-    public function listEvent(){
+    public function listEvent(Request $request ,PaginatorInterface $paginator):Response
+    {
 
-        $listEvent=$this->getDoctrine()->getRepository(Evenement::class)->findAll();
-
+        $AlllistEvent=$this->getDoctrine()->getRepository(Evenement::class)->findAll();
+        // Paginate the results of the query
+        $listEvent= $paginator->paginate(
+        // Doctrine Query, not results
+            $AlllistEvent,
+            // Define the page parameter
+            $request->query->getInt('page', 1),
+            // Items per page
+            3
+        );
         return $this->render('event/listEvent.html.twig', [
             'listEvent' => $listEvent
         ]);
