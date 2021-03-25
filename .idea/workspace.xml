@@ -20,20 +20,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AlphaGaming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AlphaGaming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Evenement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/charts/chartjs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/forms/basic_elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/icons/mdi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/samples/blank-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/samples/error-404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/samples/error-500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/samples/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/samples/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/tables/basic-table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/ui-features/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/ui-features/dropdowns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/ui-features/typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/listEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEvent.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/listEventBack.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEventBack.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/listReser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listReser.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/listReservation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listReservation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/blog-article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/blog-fullwidth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/blog-grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/blog-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/coming-soon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/documentation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/forum-single-topic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/forum-topics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/forum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/offline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store-cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store-catalog-alt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store-catalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store-checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/tournaments-teammate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/tournaments-teams.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/tournaments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/widgets.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +240,7 @@
       <workItem from="1616338689774" duration="695000" />
       <workItem from="1616425309984" duration="4381000" />
       <workItem from="1616678081885" duration="316000" />
-      <workItem from="1616681588968" duration="160000" />
+      <workItem from="1616681667645" duration="5268000" />
     </task>
     <servers />
   </component>
@@ -235,10 +268,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615553614593" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1616681664300">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1615555283576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616681664300" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615555283576" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614912802695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

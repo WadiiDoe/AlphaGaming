@@ -50,7 +50,7 @@ class Evenement
      * @ORM\Column(type="float")
      * @Assert\NotBlank(message="veuillez entrer le prix")
      * @Assert\Type(
-     *     type="integer",
+     *     type="float",
      *     message="The value {{ value }} is not a valid {{ type }}."
      * )
      */
