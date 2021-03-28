@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Jeux;
+use App\Entity\Rating;
 use App\Form\RateFormType;
+use App\Form\RatingFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,32 +37,14 @@ class JeuxController extends AbstractController
     public function afficher_un_jeux(Request $request,$id){
         $em = $this->getDoctrine()->getManager();
         $jeux = $this->getDoctrine()->getRepository(Jeux::class)->find($id);
-        $form = $this->createForm(RateFormType::class,$jeux);
-        $form->handleRequest($request);
+        $rating = $em->getRepository(Rating::class)->find($id);
+        $form = $this->createForm(RatingFormType::class,$rating);
         $em->flush();
         return $this->render('jeux/afficher_detail_jeux.html.twig',[
-            'form_rate'=>$form->createView(),
             'Jeux'=> $jeux,
+            'form_rate'=>$form->createView(),
         ]);
     }
-
-    /**
-     * @Route("/rate_jeux/{id}", name="rate_jeux")
-     */
-    public function update_rating(Request $request, int $id){
-        $em = $this->getDoctrine()->getManager();
-        $jeux = $em->getRepository(Jeux::class)->find($id);
-        $form = $this->createForm(RateFormType::class,$jeux);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em->flush();
-        }
-        return $this->render('jeux/afficher_detail_jeux.html.twig',
-            array('form_rate'=>$form->createView(),
-                'form_title'=>'mytitle')
-        );
-    }
-
    /* /**
      * @Route("/rate_jeux/{id}", name="rate_jeux")
      */

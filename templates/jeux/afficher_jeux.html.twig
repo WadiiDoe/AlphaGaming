@@ -43,9 +43,10 @@
                     <!-- START: Post -->
 
                     <table id="tableac">
+                        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
                         <div>
-                                <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-                                <input class="form-control" placeholder="" id="search">
+
+                                <input class="form-control" placeholder=" chercher un jeux " id="search" type="text">
 
                         </div>
                         <tbody>
@@ -74,36 +75,11 @@
                         </div>
                     </div>
                         </tr>
-                    <script>
-                        $(document).ready(function(){
-                            $('#search').keyup(function(){
-                                search_table($(this).val());
-                            });
-                            function search_table(value){
-                                $('#tableac tbody tr').each(function(){
-                                    var found = 'false';
-                                    $(this).each(function(){
-                                        if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
-                                        {
-                                            found = 'true';
-                                        }
-                                    });
-                                    if(found == 'true')
-                                    {
-                                        $(this).show();
 
-                                    }
-                                    else
-                                    {
-                                        $(this).hide();
-
-                                    }
-                                });
-                            }
-                        });
-                    </script>
                         </tbody>
+
                     {% endfor %}
+
 
                     </table>
                     <!-- END: Post -->
@@ -390,7 +366,9 @@
                         <h4 class="nk-widget-title"><span><span class="text-main-1">Latest</span> Video</span></h4>
                         <div class="nk-widget-content">
                             <script src="{{ asset('assets/js/warzone.js') }}"></script>
+                            <p>Nombre de jeux jouez: </p>
                             <div id="games"></div>
+                            <p>Score: </p>
                             <div id="kd"></div>
                         </div>
                     </div>
@@ -600,7 +578,6 @@
 
 
 
-
 {% endblock %}
 
 
@@ -610,6 +587,41 @@
 <img class="nk-page-background-top" src="{{ asset('assets/images/bg-top-3.png') }}" alt="">
 <img class="nk-page-background-bottom" src="{{ asset('assets/images/bg-bottom.png') }}" alt="">
 {% endblock %}
+
+      {% block js  %}
+         <script>$(document).ready(function(){
+                 $('#search').keyup(function(){
+                     search_table($(this).val());
+                 });
+                 function search_table(value){
+                     $('#tableac tbody tr').each(function(){
+                         var found = 'false';
+                         $(this).each(function(){
+                             if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                             {
+
+                                 found = 'true';
+                             }
+                         });
+                         if(found == 'true')
+                         {
+                             $(this).show();
+
+
+                         }
+                         else
+                         {
+                             $(this).hide();
+
+
+                         }
+                     });
+                 }
+             });
+         </script>
+     {% endblock %}
+
+
 
 
 

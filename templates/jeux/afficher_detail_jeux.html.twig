@@ -196,7 +196,7 @@
                                 <div class="nk-reply">
                                     <form action="#" class="nk-form">
 
-                                        <div class="row vertical-gap sm-gap">
+                                        {# <div class="row vertical-gap sm-gap">
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control required" name="name" placeholder="Name *">
                                             </div>
@@ -205,11 +205,12 @@
                                             </div>
                                         </div>
                                         <div class="nk-gap-1"></div>
-                                        <textarea class="form-control required" name="message" rows="5" placeholder="Your Review *" aria-required="true"></textarea>
+                                        <textarea class="form-control required" name="message" rows="5" placeholder="Your Review *" aria-required="true"></textarea>#}
                                         <div class="nk-gap-1"></div>
-
+                                        {{ form_start(form_rate) }}
+                                        {{ form_widget(form_rate.rate) }}
                                         <div class="nk-rating" id="rating">
-                                              {{ form_start(form_rate) }}
+
 
                                             <input type="radio" id="review-rate-5" name="review-rate" value="5">
                                             <label for="review-rate-5">
@@ -240,15 +241,10 @@
                                                 <span><i class="far fa-star"></i></span>
                                                 <span><i class="fa fa-star"></i></span>
                                             </label>
-
+                                            {{ form_widget(form_rate.submit) }}
 
                                         </div>
-                                        {{ form_widget(form_rate.rating) }}
-                                        <input id="result" type="text" class="form-control" value="">
-                                        {{ form_widget(form_rate.Evaluez) }}
-                                        <button class="nk-btn nk-btn-rounded nk-btn-color-dark-3 float-right" id="btn_rate" >Submit</button>
-
-
+                                        {{ form_end(form_rate) }}
                                     </form>
                                 </div>
                                 <!-- END: Reply -->

@@ -51,20 +51,20 @@ class Jeux
      * @Assert\File(mimeTypes={"image/jpeg"})
      */
     private $img;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $rating;
-
     /**
      * @ORM\OneToMany(targetEntity=Serveur::class, mappedBy="jeux")
      */
     private $serveur;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Rating::class, mappedBy="jeux")
+     */
+    private $rating;
+
     public function __construct()
     {
         $this->serveur = new ArrayCollection();
+        $this->rating = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -143,19 +143,6 @@ class Jeux
 
         return $this;
     }
-
-    public function getRating(): ?int
-    {
-        return $this->rating;
-    }
-
-    public function setRating(?int $rating): self
-    {
-        $this->rating = $rating;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Serveur[]
      */
@@ -180,6 +167,36 @@ class Jeux
             // set the owning side to null (unless already changed)
             if ($serveur->getJeux() === $this) {
                 $serveur->setJeux(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Rating[]
+     */
+    public function getRating(): Collection
+    {
+        return $this->rating;
+    }
+
+    public function addRating(Rating $rating): self
+    {
+        if (!$this->rating->contains($rating)) {
+            $this->rating[] = $rating;
+            $rating->setJeux($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRating(Rating $rating): self
+    {
+        if ($this->rating->removeElement($rating)) {
+            // set the owning side to null (unless already changed)
+            if ($rating->getJeux() === $this) {
+                $rating->setJeux(null);
             }
         }
 

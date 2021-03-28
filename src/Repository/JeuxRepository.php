@@ -18,15 +18,6 @@ class JeuxRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Jeux::class);
     }
-
-
-    public function updaterating(int $n , int $id){
-        $em = $this->getEntityManager();
-        $query = $em->createQuery('UPDATE App\Entity\Jeux j set j.rating = :n WHERE j.id= :id'
-        )->setParameter('n',$n)
-        ->setParameter('id',$id);
-    }
-
     // /**
     //  * @return Jeux[] Returns an array of Jeux objects
     //  */
