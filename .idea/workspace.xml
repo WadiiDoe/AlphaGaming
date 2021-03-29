@@ -20,24 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AlphaGaming.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/listEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEvent.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/listReser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listReser.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/listReservation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listReservation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reservation/confirmation_mail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/confirmation_mail.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +208,7 @@
       <workItem from="1616892499884" duration="16164000" />
       <workItem from="1616955569308" duration="6239000" />
       <workItem from="1616970310739" duration="2542000" />
-      <workItem from="1616974920852" duration="10505000" />
+      <workItem from="1616974920852" duration="11780000" />
     </task>
     <servers />
   </component>

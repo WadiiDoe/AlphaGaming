@@ -124,12 +124,12 @@ class EventController extends Controller
                     'required'=> false
                 ]
             ])
-            ->add('adresse', TextType::class,[
+           /* ->add('adresse', TextType::class,[
                 'attr'=> [
                     'placeholder' =>'adresse',
                     'class'=> 'form-control'
                 ]
-            ])
+            ])*/
             ->add('prix', TextType::class,[
                 'attr'=> [
                     'placeholder' => 'Prix',
@@ -166,7 +166,7 @@ class EventController extends Controller
             $file=$evenement->getImage();
             $fileName=md5(uniqid()).'.'.$file->guessExtension();
             $evenement = $form->getData();
-
+            $evenement->setAdresse($req->get('adresse'));
             $evenement->setLongitude($req->get('longitude'));
             $evenement->setLatitude( $req->get('latitude'));
 

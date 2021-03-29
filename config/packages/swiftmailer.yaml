@@ -1,7 +1,7 @@
 swiftmailer:
     transport:        gmail
-    username:         jouini.mohamednourelhak@esprit.tn
-    password:         203JMT0242
+    username:         wadii.jhinaoui@esprit.tn
+    password:         leeseungwoo10
     host:             localhost
     port:             465
     encryption:       ssl

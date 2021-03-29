@@ -112,8 +112,8 @@ class ReservationController extends AbstractController
         $reservation=$em->getRepository( Reservation::class)->find($id);
         $reservation->setApprouve(1);
         $message = (new \Swift_Message('Validation Réservation'))
-            ->setFrom('jouini.mohamednourelhak@esprit.tn')
-            ->setTo('jouini.mohamednourelhak@gmail.com')
+            ->setFrom('wadii.jhinaoui@esprit.tn')
+            ->setTo('zeineb.gharsallah@esprit.tn')
             ->setBody(
                 $this->renderView(
                 // templates/emails/confirmation_mail.html.twig
