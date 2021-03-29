@@ -36,9 +36,9 @@
                                             <td>{{ l.idevent.prix * l.nbrplace  }} DT </td>
                                             <td><img src=" {{ asset('Uploads/Image/' ~ l.idevent.image) }}" class="img-lg" "></td>
                                             {% if l.approuve ==1 %}
-                                                <td style="background-color: #0b2e13">Approuved</td>
+                                                <td style="background-color: #0b2e13">Approved</td>
                                             {% elseif l.approuve==0 %}
-                                                <td><label class="badge badge-light"><a href="{{ url('approuverReservation',{'id':l.id}) }}">approuver</a></label></td>
+                                                <td><label class="badge badge-light"><a href="{{ url('approuverReservation',{'id':l.id}) }}">Approve</a></label></td>
                                             {% endif %}
 
 

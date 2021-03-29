@@ -30,6 +30,12 @@ class EventController extends Controller
             'controller_name' => 'EventController',
         ]);
     }
+
+
+
+
+
+
     /**
      * @Route("/listEvent", name="listEvent")
      */
@@ -44,13 +50,20 @@ class EventController extends Controller
             // Define the page parameter
             $request->query->getInt('page', 1),
             // Items per page
-            3
+            4
         );
         return $this->render('event/listEvent.html.twig', [
             'listEvent' => $listEvent
         ]);
 
     }
+
+
+
+
+
+
+
     /**
      * @Route("/listEventBack", name="listEventBack")
      */
@@ -63,6 +76,12 @@ class EventController extends Controller
         ]);
 
     }
+
+
+
+
+
+
 
     /**
      * @route("/evenement/{id}", name="evenement")
@@ -79,6 +98,11 @@ class EventController extends Controller
     }
 
 
+
+
+
+
+
     /**
      * @Route("/addevent", name="add_event")
      */
@@ -87,19 +111,65 @@ class EventController extends Controller
         $em = $this->getDoctrine()->getManager();
         $evenement = new Evenement();
         $form = $this->createFormBuilder($evenement)
-            ->add('nom', TextType::class)
-            ->add('description', TextType::class)
-            ->add('adresse', TextType::class)
-            ->add('prix', TextType::class)
-            ->add('nbrePlace', TextType::class)
-            ->add('date', DateType::class)
-            ->add('image', FileType::class)
+            ->add('nom', TextType::class, [
+                'attr'=> [
+                    'placeholder' =>'Nom event',
+                    'class'=> 'form-control'
+                ]
+            ])
+            ->add('description', TextType::class,[
+                'attr'=>[
+                    'placeholder' => 'Description',
+                    'class' => 'form-control',
+                    'required'=> false
+                ]
+            ])
+            ->add('adresse', TextType::class,[
+                'attr'=> [
+                    'placeholder' =>'adresse',
+                    'class'=> 'form-control'
+                ]
+            ])
+            ->add('prix', TextType::class,[
+                'attr'=> [
+                    'placeholder' => 'Prix',
+                    'class' =>'form-control',
+                    'type' => 'number',
+                    'step'=>'any',
+                    'empty_data'=> '0'
+                ]
+            ])
+            ->add('nbrePlace', TextType::class,[
+                'attr'=>[
+                    'placeholder' => 'capacité',
+                    'class' =>'form-control',
+                    'type' => 'number',
+                    'empty_data'=> '0'
+                ]
+            ])
+            ->add('date', DateType::class,[
+                'widget' => 'single_text',
+                'attr' =>[
+                    'class' => 'form-control',
+                    'placeholder'=> 'dd/mm/yyyy',
+                    'type'=>'date'
+                ]
+            ])
+            ->add('image', FileType::class, [
+                'attr' => ['class' => 'form-control'],
+            ])
+
+
             ->getForm();
         $form->handleRequest($req);
         if ($form->isSubmitted() && $form->isValid()) {
             $file=$evenement->getImage();
             $fileName=md5(uniqid()).'.'.$file->guessExtension();
             $evenement = $form->getData();
+
+            $evenement->setLongitude($req->get('longitude'));
+            $evenement->setLatitude( $req->get('latitude'));
+
             $em = $this->getDoctrine()->getManager();
             $evenement->setImage($fileName);
             try{
@@ -119,6 +189,11 @@ class EventController extends Controller
 
         ]);
         }
+
+
+
+
+
         /**
          * @param $id
          * @Route("/supprimerevent/{id}",name="supprimerevent")
@@ -133,6 +208,11 @@ class EventController extends Controller
 
     }
 
+
+
+
+
+
     /**
      * @Route("/modifierEvent/{id}", name="modifierEvent")
      */
@@ -140,12 +220,50 @@ class EventController extends Controller
         $evenement = $this->getDoctrine()->getRepository(Evenement::class)->find($id);
 
         $form = $this->createFormBuilder ($evenement)
-            ->add('nom', TextType::class)
-            ->add('description', TextType::class)
-            ->add('adresse', TextType::class)
-            ->add('prix', TextType::class)
-            ->add('nbrePlace', TextType::class)
-            ->add('date', DateType::class)
+            ->add('nom', TextType::class,[
+                'attr'=> [
+                    'placeholder' =>'Nom event',
+                    'class'=> 'form-control'
+                ]
+            ])
+            ->add('description', TextType::class,[
+                'attr'=>[
+                    'placeholder' => 'Description',
+                    'class' => 'form-control',
+                    'required'=> false
+                ]
+            ])
+            ->add('adresse', TextType::class,[
+                'attr'=> [
+                    'placeholder' =>'adresse',
+                    'class'=> 'form-control'
+                ]
+            ])
+            ->add('prix', TextType::class,[
+                'attr'=> [
+                    'placeholder' => 'Prix',
+                    'class' =>'form-control',
+                    'type' => 'number',
+                    'step'=>'any',
+                    'empty_data'=> '0'
+                ]
+            ])
+            ->add('nbrePlace', TextType::class,[
+                'attr'=>[
+                    'placeholder' => 'capacité',
+                    'class' =>'form-control',
+                    'type' => 'number',
+                    'empty_data'=> '0'
+                ]
+            ])
+            ->add('date', DateType::class,[
+                'widget' => 'single_text',
+                'attr' =>[
+                    'class' => 'form-control',
+                    'placeholder'=> 'dd/mm/yyyy',
+                    'type'=>'date'
+                ]
+            ])
             ->getForm();
         $form ->handleRequest($req);
         if ($form->isSubmitted()) {

@@ -24,6 +24,11 @@ class ReservationController extends AbstractController
         ]);
     }
 
+
+
+
+
+
     /**
      * @Route("/reserverEvent/{id}", name="reserverEvent")
      */
@@ -39,7 +44,7 @@ class ReservationController extends AbstractController
                 $reservation->setApprouve(0);
 
 
-                if( $nbredeticketDemandé < $evenement->getNbrePlace()){
+                if( $nbredeticketDemandé <= $evenement->getNbrePlace()){
                     $reservation->setNbrPlace($nbredeticketDemandé);
                     $evenement->setNbrePlace(($evenement->getNbrePlace())-(int)($req->get('nbrplace')));
                 }
@@ -59,6 +64,13 @@ class ReservationController extends AbstractController
 
         return $this->render('event/evenement.html.twig',array('evenement'=>$evenement));
     }
+
+
+
+
+
+
+
     /**
      * @Route("/listreservation/{id}", name="afficherReservation")
      */
@@ -68,6 +80,13 @@ class ReservationController extends AbstractController
         return $this->render('event/listReservation.html.twig',array('reservations'=>$listReservation));
 
     }
+
+
+
+
+
+
+
     /**
      * @Route("/listreser", name="listReservation")
      */
@@ -79,17 +98,32 @@ class ReservationController extends AbstractController
     }
 
 
+
+
+
+
     /**
      * @param $id
      * @Route("/approuverReservation/{id}",name="approuverReservation")
      */
-    public function approuverReservation($id)
+    public function approuverReservation($id,\Swift_Mailer $mailer)
     {
         $em= $this->getDoctrine()->getManager();
         $reservation=$em->getRepository( Reservation::class)->find($id);
         $reservation->setApprouve(1);
+        $message = (new \Swift_Message('Validation Réservation'))
+            ->setFrom('jouini.mohamednourelhak@esprit.tn')
+            ->setTo('jouini.mohamednourelhak@gmail.com')
+            ->setBody(
+                $this->renderView(
+                // templates/emails/confirmation_mail.html.twig
+                    'reservation/confirmation_mail.html.twig'
+                ),
+                'text/html'
+            );
         $em->merge($reservation);
         $em->flush();
+        $mailer->send($message);
         return $this->redirectToRoute('listReservation',array('id'=>$id));
 
     }

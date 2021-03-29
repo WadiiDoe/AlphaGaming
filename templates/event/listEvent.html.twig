@@ -46,7 +46,7 @@
                             <div class="col-md-5 col-lg-6">
                                 <a href="{{ url('evenement',{'id':l.id}) }}" class="nk-post-img">
                                     <img src=" {{ asset('Uploads/Image/' ~ l.image) }}" height="600" width="383" alt="{{ l.nom }}">
-                                    <span class="nk-post-comments-count">4</span>
+
                                 </a>
                             </div>
                             <div class="col-md-7 col-lg-6">
@@ -57,7 +57,7 @@
                                 </div>
 
                                 <div class="nk-post-by">
-                                    <img src="../../public/Frontend/assets/images/avatar-1.jpg" alt="Hitman" class="rounded-circle" width="35"> by <a href="https://nkdev.info">Admin</a>
+                                     by <a href="https://nkdev.info">Admin</a>
                                     {{l.date|date('d-m-Y') }}
                                 </div>
                             </div>
