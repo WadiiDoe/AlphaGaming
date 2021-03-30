@@ -20,25 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AlphaGaming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AlphaGaming.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210329195011.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210329195011.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/JeuxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuxController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ServeurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServeurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Jeux.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Jeux.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Serveur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Serveur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jeux/afficher_detail_jeux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/afficher_detail_jeux.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jeux/afficher_jeux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/afficher_jeux.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jeux/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jeux/rate_jeux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/rate_jeux.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reservation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/serveur/afficher_sv.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/serveur_front/afficher_sv.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/serveur/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/serveur_front/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210329195011.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_back.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_back.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/jeux_front/afficher_jeux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/afficher_jeux.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/serveur_front/afficher_sv.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/serveur_front/afficher_sv.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,9 +137,7 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
       <path value="$PROJECT_DIR$/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
@@ -190,9 +182,17 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
       <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p7ageFPbKXIBN9CpXBcU952KCo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -203,22 +203,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\AlphaGaming\vendor" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\src" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\templates" />
-      <recent name="C:\xampp\htdocs\AlphaGaming" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\AlphaGaming\public\Frontend\assets\js" />
       <recent name="C:\wamp64\www\AlphaGaming\templates\event" />
       <recent name="C:\wamp64\www\AlphaGaming\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AlphaGaming\templates" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\src\Repository" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\src\Form" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\src\Entity" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\src\Controller" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -236,6 +237,7 @@
       <workItem from="1614789146047" duration="8186000" />
       <workItem from="1614883305189" duration="15665000" />
       <workItem from="1617045409619" duration="10151000" />
+      <workItem from="1617131996228" duration="6760000" />
     </task>
     <servers />
   </component>

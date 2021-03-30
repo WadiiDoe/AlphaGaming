@@ -1,0 +1,79 @@
+{% extends 'base_front.html.twig' %}
+{% block viewpostactive %}active{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <ul class="nk-breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li><span class="fa fa-angle-right"></span></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><span class="fa fa-angle-right"></span></li>
+            <li><span>{{ post.titrePost }}</span></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <div class="nk-gap-2"></div>
+
+
+        <ul class="nk-forum nk-forum-topic">
+            <li>
+                <div class="nk-forum-topic-author">
+                    <a href="#">
+                        <img src="assets/images/avatar-1.jpg" alt="Hitman">
+                    </a>
+                    <div class="nk-forum-topic-author-name" title="Hitman">
+                        <a href="#">Hitman</a>
+                    </div>
+                    <div class="nk-forum-topic-author-role">Keymaster</div>
+                    <div class="nk-forum-topic-author-since">
+                        Member since January 13, 2018
+                    </div>
+                </div>
+                <div class="nk-forum-topic-content">
+                    <p>{{ post.sujet }}</p>
+                </div>
+                <div class="nk-forum-topic-footer">
+                    <span class="nk-forum-topic-date">{{ post.DatePost.format('d M y') }}</span>
+
+                    <span class="nk-forum-action-btn">
+                        {{ post.likes }} <span class="fa fa-heart"></span>
+                    </span>
+                    <span class="nk-forum-action-btn">
+                        <a href="#forum-reply" class="nk-anchor"><span class="fa fa-reply"></span> Reply</a>
+                    </span>
+                    <span class="nk-forum-action-btn">
+                        <a href="#"><span class="fa fa-flag"></span> Spam</a>
+                    </span>
+                </div>
+            </li>
+
+        <div class="nk-gap-2"></div>
+
+        <!-- START: Pagination -->
+        <div class="row">
+            <div class="col-md-3 order-md-2 text-right">
+                <a href="{{ path('ajouter_post') }}" class="nk-btn nk-btn-rounded nk-btn-color-white">New Topic</a>
+            </div>
+            <div class="col-md-9">
+                <div class="nk-pagination nk-pagination-left">
+                    <a href="#" class="nk-pagination-prev">
+                        <span class="ion-ios-arrow-back"></span>
+                    </a>
+                    <nav>
+                        <a class="nk-pagination-current" href="#">1</a>
+                    </nav>
+                    <a href="#" class="nk-pagination-next">
+                        <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END: Pagination -->
+    </div>
+
+
+
+
+
+{% endblock %}
