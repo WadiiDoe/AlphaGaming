@@ -52,7 +52,7 @@ class Jeux
      */
     private $img;
     /**
-     * @ORM\OneToMany(targetEntity=Serveur::class, mappedBy="jeux")
+     * @ORM\OneToMany(targetEntity=Serveur::class, mappedBy="jeux_front")
      */
     private $serveur;
 

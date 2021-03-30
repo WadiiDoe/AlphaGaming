@@ -1,0 +1,31 @@
+{% extends "base_back.html.twig" %}
+
+
+
+{% block body %}
+    <h1>Liste des jeux </h1>
+    <p><a href="{{ path('add_jeux') }}">Ajouter un jeux</a></p>
+    <
+    {% for Jeux in list %}
+        <table>
+            <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>QTE</th>
+            </thead>
+            <tbody>
+            <td>{{ Jeux.id }}</td>
+            <td>{{ Jeux.nom }}</td>
+            <td>{{ Jeux.releaseDate|date('d-m-Y') }}</td>
+            <td>{{ Jeux.prix }}</td>
+            <td>{{ Jeux.qteJeux }}</td>
+            <td>{{ Jeux.description }}</td>
+            <td>{{ Jeux.img}}</td>
+            <td><a href="{{ path('delete_jeux', {'id': Jeux.id}) }}">Supprimer</a></td>
+            <td><a href="{{ path('change_jeux', {'id': Jeux.id}) }}">Modifier</a></td>
+            </tbody>
+        </table>
+    {% endfor %}
+{% endblock %}

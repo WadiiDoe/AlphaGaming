@@ -1,0 +1,94 @@
+{% extends "base_back.html.twig" %}
+{% block body %}
+<div class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title"> Basic Tables </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-10 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Liste des jeux</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="tableac">
+                                        <script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+                                        <div> <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                                <input type="text" class="form-control" placeholder="Chercher un Jeux" id="search">
+                                            </form>
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nom du jeux</th>
+                                            <th>Prix</th>
+                                            <th>Quantité</th>
+                                            <th>Date de sortie</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for Jeux in list %}
+                                        <tr>
+                                            <td>{{ Jeux.id }}</td>
+                                            <td>{{ Jeux.nom }}</td>
+                                            <td>{{ Jeux.prix }}</td>
+                                            <td>{{ Jeux.qteJeux }}</td>
+                                            <td>{{ Jeux.releaseDate.format('d/m/y')}}</td>
+                                            <td><a href="{{ url('show_jeux',{'id':Jeux.id}) }}" class="nk-post-img">
+                                                    <img src=" {{ asset('Uploads/Image/' ~ Jeux.img) }}" height="600" width="383" alt="{{ Jeux.nom }}"></a> </td>
+                                            <td> <a href="{{ path('admin_delete_jeux', {'id': Jeux.id}) }}">Supprimer </a></td>
+                                            <td><a href="{{ path('admin_change_jeux', {'id': Jeux.id}) }}">Modifier</a></td>
+
+
+                                        </tr>
+                                        <script>
+                                            $(document).ready(function(){
+                                                $('#search').keyup(function(){
+                                                    search_table($(this).val());
+                                                });
+                                                function search_table(value){
+                                                    $('#tableac tbody tr').each(function(){
+                                                        var found = 'false';
+                                                        $(this).each(function(){
+                                                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                            {
+                                                                found = 'true';
+                                                            }
+                                                        });
+                                                        if(found == 'true')
+                                                        {
+                                                            $(this).show();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).hide();
+
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        </script>
+                                        </tbody>
+
+                                        {% endfor %}
+                                            <tr><td><a href="{{ path('listimprimer') }}"><button type="button" class="btn btn-outline-primary" data-dismiss="modal">Imprimer</button></a></td></tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+{% endblock %}

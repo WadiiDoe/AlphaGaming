@@ -1,0 +1,71 @@
+{% extends "base_back.html.twig" %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ asset('assets/vendors/select2/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
+
+{% endblock %}
+{% block body %}
+
+    <div class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title"> </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ form_title }} </h4>
+
+                                {{ form_start (form_jeux,{'attr':{'novalidate':'novalidate'}}) }}
+                                    <div>
+                                        {{ form_label(form_jeux.nom,"Nom") }}
+                                        {{ form_widget(form_jeux.nom) }}
+                                        {{ form_errors(form_jeux.nom) }}
+                                    </div>
+                                <div>
+                                        {{ form_label(form_jeux.release_date,"Date de sortie") }}
+                                        {{ form_widget(form_jeux.release_date) }}
+                                    {{ form_errors(form_jeux.release_date) }}
+
+                                </div>
+                                <div>
+                                    {{ form_label(form_jeux.prix,"Prix du jeux_back") }}
+                                    {{ form_widget(form_jeux.prix) }}
+                                </div>
+                                <div>
+                                    {{ form_label(form_jeux.qte_jeux,"Quantité") }}
+                                    {{ form_widget(form_jeux.qte_jeux) }}
+                                </div>
+                                <div>
+                                    {{ form_label(form_jeux.description,"Description du jeux_back ") }}
+                                    {{ form_widget(form_jeux.description) }}
+                                </div>
+                                <div>
+                                    {{ form_label(form_jeux.Img,"Image du jeux_back") }}
+                                    {{ form_widget(form_jeux.Img) }}
+                                </div>
+                                <div>
+                                    {{ form_widget(form_jeux.submit) }}
+                                    {{ form_widget(form_jeux.annuler) }}
+                                </div>
+                                {{ form_end(form_jeux) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ asset('assets/vendors/select2/select2.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/typeahead.js/typeahead.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/file-upload.js') }}"></script>
+<script src="{{ asset('assets/js/typeahead.js') }}"></script>
+<script src="{{ asset('assets/js/select2.js') }}"></script>
+
+{% endblock %}

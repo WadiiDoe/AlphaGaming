@@ -33,7 +33,7 @@ class Serveur
     private $nom_sv;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Jeux::class, inversedBy="serveur")
+     * @ORM\ManyToOne(targetEntity=Jeux::class, inversedBy="serveur_front")
      * @ORM\JoinColumn(nullable=true)
      */
     private $jeux;
@@ -45,12 +45,12 @@ class Serveur
 
     public function getAdrSv(): ?string
     {
-        return $this->nom_sv;
+        return $this->adr_sv;
     }
 
-    public function setAdrSv(string $nom_sv): self
+    public function setAdrSv(string $adr_sv): self
     {
-        $this->nom_sv = $nom_sv;
+        $this->adr_sv = $adr_sv;
 
         return $this;
     }

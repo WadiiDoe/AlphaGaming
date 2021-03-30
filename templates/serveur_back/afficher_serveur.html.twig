@@ -1,0 +1,90 @@
+{% extends "base_back.html.twig" %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> Basic Tables </h3>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-10 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Liste des Serveur</h4>
+
+
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="tableac">
+                                <script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+                                <div> <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                        <input type="text" class="form-control" placeholder="Chercher un serveur" id="search">
+                                    </form>
+                                <thead>
+                                <tr>
+                                    <th>ID Du serveur</th>
+                                    <th>Nom du Serveur</th>
+                                    <th>Adresse du serveur</th>
+                                    <th>Description du serveur</th>
+                                    <th>Nom du jeux </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for Serveur in list %}
+                                <tr>
+                                    <td>{{ Serveur.id }}</td>
+                                    <td>{{ Serveur.nomSv }}</td>
+                                    <td>{{ Serveur.adrSv }}</td>
+                                    <td>{{ Serveur.descriptionSv }}</td>
+                                    <td>{{ Serveur.Jeux.nom}}</td>
+                                    <td> <a href="{{ path('admin_delete_sv', {'id': Serveur.id}) }}">Supprimer </a></td>
+                                    <td><a href="{{ path('admin_change_sv', {'id': Serveur.id}) }}">Modifier</a></td>
+
+                                </tr>
+                                <script>
+                                    $(document).ready(function(){
+                                        $('#search').keyup(function(){
+                                            search_table($(this).val());
+                                        });
+                                        function search_table(value){
+                                            $('#tableac tbody tr').each(function(){
+                                                var found = 'false';
+                                                $(this).each(function(){
+                                                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                    {
+                                                        found = 'true';
+                                                    }
+                                                });
+                                                if(found == 'true')
+                                                {
+                                                    $(this).show();
+
+                                                }
+                                                else
+                                                {
+                                                    $(this).hide();
+
+                                                }
+                                            });
+                                        }
+                                    });
+                                </script>
+                                </tbody>
+                                {% endfor %}
+                                <tr><td><a href="{{ path('listimprimer') }}"><button type="button" class="btn btn-outline-primary" data-dismiss="modal">Imprimer</button></a></td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+{% endblock %}

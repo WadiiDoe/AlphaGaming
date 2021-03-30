@@ -1,0 +1,71 @@
+{% extends "base_back.html.twig" %}
+
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('public/assets/vendors/select2/select2.min.css') }}">
+    <link rel="stylesheet" href="../../public/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+   {% endblock %}
+{% block body %}
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title"> Form elements </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ form_title }}</h4>
+
+                                {{ form_start (form_sv,{'attr':{'novalidate':'novalidate'}}) }}
+                                    <div>
+                                       {{ form_label(form_sv.nom_sv,"Nom du serveur") }}
+                                        {{ form_widget(form_sv.nom_sv) }}
+                                        {{ form_errors(form_sv.nom_sv)}}
+                                    </div>
+                                    <div>
+                                       {{ form_label(form_sv.adr_sv,"Adresse du serveur") }}
+                                        {{ form_widget(form_sv.adr_sv)}}
+                                        {{ form_errors(form_sv.adr_sv) }}
+                                    </div>
+                                    <div>
+                                        {{ form_label(form_sv.description_sv,"Description du serveur") }}
+                                        {{ form_widget(form_sv.description_sv) }}
+                                    </div>
+                                <div>
+                                    {{ form_label(form_sv.jeux,"Jeux du serveur ") }}
+                                    {{ form_widget(form_sv.jeux) }}
+                                    {{ form_errors(form_sv.jeux) }}
+
+                                </div>
+                                <div>
+                                    {{ form_widget(form_sv.submit)  }}
+                                    {{ form_widget(form_sv.Annuler)  }}
+                                </div>
+                                {{ form_end(form_sv) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="../../assets/vendors/select2/select2.min.js"></script>
+<script src="../../assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+
+<script src="../../assets/js/file-upload.js"></script>
+<script src="../../assets/js/typeahead.js"></script>
+<script src="../../assets/js/select2.js"></script>
+{% endblock %}
+
