@@ -21,11 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Evenement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reservation/confirmation_mail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/confirmation_mail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +209,16 @@
       <workItem from="1616892499884" duration="16164000" />
       <workItem from="1616955569308" duration="6239000" />
       <workItem from="1616970310739" duration="2542000" />
-      <workItem from="1616974920852" duration="11780000" />
+      <workItem from="1616974920852" duration="13025000" />
+      <workItem from="1616994267091" duration="1135000" />
+      <workItem from="1617004268911" duration="2922000" />
+      <workItem from="1617008459934" duration="2074000" />
+      <workItem from="1617010835404" duration="601000" />
+      <workItem from="1617011512842" duration="107000" />
+      <workItem from="1617011630612" duration="579000" />
+      <workItem from="1617020112699" duration="310000" />
+      <workItem from="1617028832800" duration="3706000" />
+      <workItem from="1617110175415" duration="3655000" />
     </task>
     <servers />
   </component>
@@ -252,10 +262,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1616892963576" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1615307110508">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1617005454233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1615307110508" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617005454233" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614619429138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -36,9 +36,10 @@ class ReservationController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $evenement = $this->getDoctrine()->getRepository(Evenement::class)->find($id);
+        // $connectedUser= fonction li t5arajlk user connectee session
             $reservation = new Reservation();
             if($req->isMethod("post")) {
-                $reservation->setIduser("1");
+                $reservation->setIduser("1"); // tbadalha hne $connectedUser /$connectedUser->getId
                 $reservation->setIdevent($evenement);
                 $nbredeticketDemandé=(int)($req->get('nbrplace'));
                 $reservation->setApprouve(0);
@@ -110,10 +111,11 @@ class ReservationController extends AbstractController
     {
         $em= $this->getDoctrine()->getManager();
         $reservation=$em->getRepository( Reservation::class)->find($id);
+        //£connectedUser
         $reservation->setApprouve(1);
         $message = (new \Swift_Message('Validation Réservation'))
             ->setFrom('wadii.jhinaoui@esprit.tn')
-            ->setTo('zeineb.gharsallah@esprit.tn')
+            ->setTo('hsan.mk2020@gmail.com') //connectedUser get mail
             ->setBody(
                 $this->renderView(
                 // templates/emails/confirmation_mail.html.twig

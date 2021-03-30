@@ -50,7 +50,7 @@ class EventController extends Controller
             // Define the page parameter
             $request->query->getInt('page', 1),
             // Items per page
-            4
+            3
         );
         return $this->render('event/listEvent.html.twig', [
             'listEvent' => $listEvent
@@ -124,12 +124,7 @@ class EventController extends Controller
                     'required'=> false
                 ]
             ])
-           /* ->add('adresse', TextType::class,[
-                'attr'=> [
-                    'placeholder' =>'adresse',
-                    'class'=> 'form-control'
-                ]
-            ])*/
+
             ->add('prix', TextType::class,[
                 'attr'=> [
                     'placeholder' => 'Prix',

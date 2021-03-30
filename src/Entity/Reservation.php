@@ -20,7 +20,7 @@ class Reservation
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $iduser;
+    private $iduser; //many to one between user and reservation
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Evenement", inversedBy="Reservation")
