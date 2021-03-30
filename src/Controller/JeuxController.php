@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Jeux;
 
 use App\Form\JeuxFormType;
+use App\Repository\JeuxRepository;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -159,6 +160,30 @@ class JeuxController extends AbstractController
         ]);
 
 
+    }
+
+    /**
+     * @Route("/calendar", name="calendar")
+     */
+    public function index(JeuxRepository $jeux):Response
+    {
+        $events = $jeux->findAll();
+
+        $tab = [];
+        foreach ($events as $event){
+            $tab[] = [
+                'id'=>$event->getId(),
+                'start'=>$event->getReleaseDate()->format('Y-m-d H:i:s'),
+                //'end'=>$event->getEnd()->format('Y-m-d H:i:s'),
+                'title'=>$event->getDescription(),
+                'backgroundColor'=>$event->getBgColor(),
+                'borderColor'=>$event->getBorderColor(),
+                'textColor'=>$event->getTextColor(),
+            ];
+        }
+        $data = json_encode($tab);
+
+        return $this->render('jeux_back/calendar.html.twig', compact('data'));
     }
 
 
