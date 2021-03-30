@@ -1,0 +1,35 @@
+{% extends 'base2.html.twig' %}
+{% block body %}
+
+
+    <h1>
+          &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+
+        {{  user.nom  }}
+    </h1>
+    <h1>
+        &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+        {{  user.prenom  }}
+    </h1>
+    <h1>
+        &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+        {{  user.adresse  }}
+    </h1>
+    <h1>
+        &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+        {{ user.email }}
+    </h1>
+
+
+    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+    <img src="{{ asset('images/products/'~user.image) }} " style="width: 450px;">
+
+
+    <h1><a href="{{ path('updateprofile',{'id':user.id }) }}" >
+
+             &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+            <i class="fa fa-pencil"></i> <font color="black">
+                Edit Profile </font></a></h1>
+
+{% endblock %}
