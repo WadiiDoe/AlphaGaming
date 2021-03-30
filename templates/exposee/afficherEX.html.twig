@@ -1,0 +1,38 @@
+{% extends 'base_front.html.twig' %}
+{% block title %}<title>Nos Exposee</title>{% endblock %}
+{% block body %}
+    <section id="inner_pages">
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-8">
+            <article class="article_wrap single_post">
+
+               <div class="post-thumbnail">
+                                {% for image in exposee.photo %}
+                                    <img src="{{ asset('images/products/'~image.name) }} ">
+                                {% endfor %}
+               </div>
+
+                <aside class="col-md-4">
+                    <div class="sidebar">
+                                <div class="sidebar_widgets">
+                                    <div class="widget_title">
+                                    <h1>{{ exposee.nom }} </h1>
+                                    <h4>{{ exposee.description }} </h4>
+                                    <p>{{ exposee.dateC|date('Y-m-d') }} </p>
+                                    </div>
+                                </div>
+                    </div>
+                </aside>
+
+            </article>
+            </div>
+        </div>
+
+
+
+    </div>
+    </section>
+
+
+{% endblock %}

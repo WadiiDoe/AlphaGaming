@@ -20,19 +20,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/paginator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ExposeeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FideliteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Exposee.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Fidelite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Photos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ExposeeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ResetPasswordType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ExposeeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FideliteRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PhotosRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/UsersAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/affiche.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/afficherE.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/afficherEX.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/ajouterExposee.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/exposee/update.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fidelite/fidelite.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fidelite/fidelitelist.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/activation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/forgotten_password.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/reset_password.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/utilis/afficheU.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/utilis/ajouterUser.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/utilis/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/utilis/mycompt.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/utilis/updateUser.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AlphaGaming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AlphaGaming.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210329195011.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base_back.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_back.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jeux_front/afficher_jeux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jeux_front/afficher_jeux.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/serveur_front/afficher_sv.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/serveur_front/afficher_sv.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +224,12 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p7ageFPbKXIBN9CpXBcU952KCo" />
@@ -209,17 +252,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\AlphaGaming\public\Frontend\assets\js" />
-      <recent name="C:\wamp64\www\AlphaGaming\templates\event" />
-      <recent name="C:\wamp64\www\AlphaGaming\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\AlphaGaming\templates" />
       <recent name="C:\xampp\htdocs\AlphaGaming\src\Repository" />
       <recent name="C:\xampp\htdocs\AlphaGaming\src\Form" />
       <recent name="C:\xampp\htdocs\AlphaGaming\src\Entity" />
       <recent name="C:\xampp\htdocs\AlphaGaming\src\Controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\AlphaGaming\public\Frontend\assets\js" />
+      <recent name="C:\wamp64\www\AlphaGaming\templates\event" />
+      <recent name="C:\wamp64\www\AlphaGaming\public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
