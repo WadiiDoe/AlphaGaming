@@ -56,6 +56,21 @@ class Jeux
      */
     private $serveur;
 
+    /**
+     * @ORM\Column(type="string", length=7, nullable=true)
+     */
+    private $bg_color;
+
+    /**
+     * @ORM\Column(type="string", length=7, nullable=true)
+     */
+    private $border_color;
+
+    /**
+     * @ORM\Column(type="string", length=7, nullable=true)
+     */
+    private $text_color;
+
 
 
     public function __construct()
@@ -166,6 +181,42 @@ class Jeux
                 $serveur->setJeux(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getBgColor(): ?string
+    {
+        return $this->bg_color;
+    }
+
+    public function setBgColor(?string $bg_color): self
+    {
+        $this->bg_color = $bg_color;
+
+        return $this;
+    }
+
+    public function getBorderColor(): ?string
+    {
+        return $this->border_color;
+    }
+
+    public function setBorderColor(?string $border_color): self
+    {
+        $this->border_color = $border_color;
+
+        return $this;
+    }
+
+    public function getTextColor(): ?string
+    {
+        return $this->text_color;
+    }
+
+    public function setTextColor(?string $text_color): self
+    {
+        $this->text_color = $text_color;
 
         return $this;
     }

@@ -20,17 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20aa9dc-c20a-426c-8494-8d648038f813" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AlphaGaming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AlphaGaming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/event/listEventBack.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/event/listReser.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/event/listReservation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/confirmation_mail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210330195139.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210330204835.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210330223222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/JeuxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuxController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Evenement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Jeux.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Jeux.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Livraieur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Livraieur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Livraison.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Livraison.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base_back.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_back.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/ajouterEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/evenement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/listEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/listEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/modifierEvent.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,23 +233,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/article_front" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\AlphaGaming\templates" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\src\Repository" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\src\Form" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\src\Entity" />
-      <recent name="C:\xampp\htdocs\AlphaGaming\src\Controller" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\AlphaGaming\public\Frontend\assets\js" />
       <recent name="C:\wamp64\www\AlphaGaming\templates\event" />
       <recent name="C:\wamp64\www\AlphaGaming\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AlphaGaming\templates\article_front" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\templates\jeux_back" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\templates" />
+      <recent name="C:\xampp\htdocs\AlphaGaming\public" />
+      <recent name="C:\xampp\htdocs\AlphaGaming" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -247,6 +268,7 @@
       <workItem from="1614883305189" duration="15665000" />
       <workItem from="1617045409619" duration="10151000" />
       <workItem from="1617131996228" duration="6760000" />
+      <workItem from="1617193285082" duration="6317000" />
     </task>
     <servers />
   </component>
@@ -264,5 +286,27 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="562" y="126" key="#com.intellij.ide.util.MemberChooser" timestamp="1617195639264">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="562" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1617195639264" />
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617198905980">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1617198905980" />
+    <state x="567" y="140" key="NewPhpClassDialog" timestamp="1617169320421">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="567" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1617169320421" />
+    <state x="604" y="341" key="NewPhpFileDialog" timestamp="1617190659380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="604" y="341" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1617190659380" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1617191636705">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1617191636705" />
   </component>
 </project>

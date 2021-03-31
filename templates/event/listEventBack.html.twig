@@ -1,0 +1,99 @@
+
+
+{% extends 'base_back.html.twig' %}
+{% block body %}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+                <div class="page-header">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Events</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">list Event</li>
+                        </ol>
+                    </nav>
+                </div>
+           <div class="row grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">List Event</h4>
+
+                            </p>
+                            <div class="table-responsive">
+                                <script src="{{ asset('Backend/assets/js/jquery.min.js') }}"></script>
+                                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                    <input type="text" id="search" class="form-control" placeholder="chercher events">
+                                </form>
+
+                                <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nom</th>
+                                        <th>Description</th>
+                                        <th>Adresse</th>
+                                        <th>Nombre de Place</th>
+                                        <th>Prix</th>
+                                        <th>Image</th>
+                                        <th>Actions</th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for l in listEvent %}
+                                    <tr>
+                                        <td>{{ l.id }}</td>
+                                        <td>{{ l.nom }}</td>
+                                        <td>{{ l.description }}</td>
+                                        <td>{{ l.adresse }}</td>
+                                        <td>{{ l.nbrePlace }}</td>
+                                        <td>{{l.prix  }}</td>
+                                        <td><img src=" {{ asset('Uploads/Image/' ~ l.image) }}" height="100" width="100" "></td>
+                                        <td><label class="badge badge-danger"><a href="{{ url('supprimerevent',{'id':l.id}) }}">supprimer</a></label></td>
+                                        <td><label class="badge badge-dark"><a href="{{ url('modifierEvent',{'id':l.id}) }}">modifier</a></label></td>
+                                        <td><label class="badge badge-light"><a href="{{ url('afficherReservation',{'id':l.id}) }}">Reservations</a></label></td>
+                                    </tr>
+                                        <script>
+                                            $(document).ready(function(){
+                                                $('#search').keyup(function(){
+                                                    search_table($(this).val());
+                                                });
+                                                function search_table(value){
+                                                    $('#tableac tbody tr').each(function(){
+                                                        var found = 'false';
+                                                        $(this).each(function(){
+                                                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                            {
+                                                                found = 'true';
+                                                            }
+                                                        });
+                                                        if(found == 'true')
+                                                        {
+                                                            $(this).show();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).hide();
+
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        </script>
+
+                                     {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div></div>
+
+
+  {% endblock %}

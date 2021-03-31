@@ -18,13 +18,13 @@ class Livraison
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=client::class, inversedBy="livraisons")
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="livraisons")
      * @ORM\JoinColumn(nullable=false)
      */
     private $client;
 
     /**
-     * @ORM\ManyToOne(targetEntity=livraieur::class, inversedBy="livraisons")
+     * @ORM\ManyToOne(targetEntity=Livraieur::class, inversedBy="livraisons")
      * @ORM\JoinColumn(nullable=false)
      */
     private $livraieur;

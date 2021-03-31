@@ -18,47 +18,78 @@ class Reservation
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Reservation")
      */
-    private $iduser;
+    private $user;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Evenement", inversedBy="Reservation")
+     * @ORM\JoinColumn(name="idevent", referencedColumnName="id",onDelete="CASCADE")
      */
     private $idevent;
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user): void
+    {
+        $this->user = $user;
+    }
     /**
      * @ORM\Column(type="integer", length=255)
      */
     private $nbrplace;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $approuve;
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIduser(): ?string
+    /**
+     * @return mixed
+     */
+    public function getApprouve()
     {
-        return $this->iduser;
+        return $this->approuve;
     }
 
-    public function setIduser(string $iduser): self
+    /**
+     * @param mixed $approuve
+     */
+    public function setApprouve($approuve): void
     {
-        $this->iduser = $iduser;
-
-        return $this;
+        $this->approuve = $approuve;
     }
 
-    public function getIdevent(): ?string
+
+
+    public function getIdevent()
     {
         return $this->idevent;
     }
 
-    public function setIdevent(string $idevent): self
+    public function setIdevent( $idevent)
     {
         $this->idevent = $idevent;
 
         return $this;
     }
+
+
 
     /**
      * @return mixed
@@ -67,6 +98,8 @@ class Reservation
     {
         return $this->nbrplace;
     }
+
+
 
     /**
      * @param mixed $nbrplace

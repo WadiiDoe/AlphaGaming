@@ -23,13 +23,13 @@ class Article
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
-    private $titre_article;
+            private $titre_article;
 
     /**
      * @ORM\Column(type="text")
      *  @Assert\NotBlank()
      */
-    private $contenu_article;
+        private $contenu_article;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -42,7 +42,7 @@ class Article
      * @ORM\Column(type="date")
      *  @Assert\NotBlank()
      */
-    private $date_article;
+        private $date_article;
 
     /**
      * @ORM\Column(type="integer")

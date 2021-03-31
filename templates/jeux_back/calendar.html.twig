@@ -1,0 +1,34 @@
+{% extends "base_calendar.html.twig" %}
+
+
+
+{% block body %}
+<div id="calendar">
+
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script>
+    window.onload = () => {
+        let calendarElt = document.querySelector("#calendar")
+
+        let calendar = new FullCalendar.Calendar(calendarElt, {
+        initialView: 'dayGridMonth',
+            headerToolbar: {
+            start:'prev,next today',
+            center:'title',
+                end: 'dayGridMonth, timeGridWeek'
+            },
+            events: {{ data|raw }},
+            editable: true,
+            eventResizableFromStart: true
+        })
+        calendar.on('eventChange',(e) => {
+            console.log(e)
+        })
+        calendar.render()
+    }
+</script>
+{% endblock %}

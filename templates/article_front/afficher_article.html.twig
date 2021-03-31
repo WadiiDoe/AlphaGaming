@@ -1,0 +1,137 @@
+{% extends 'base_front.html.twig' %}
+{% block viewarticleactive %}active {% endblock %}
+{% block body %}
+    <div class="container">
+        <ul class="nk-breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li><span class="fa fa-angle-right"></span></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><span class="fa fa-angle-right"></span></li>
+            <li><span>Liste des articles</span></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <!-- START: Pagination -->
+        <div class="row justify-content-end">
+            <div class="col-md-3 text-right">
+                <a href="{{ path('ajouter_post') }}" class="nk-btn nk-btn-rounded nk-btn-color-white">New Topic</a>
+            </div>
+        </div>
+        <!-- END: Pagination -->
+
+        <div class="nk-gap-2"></div>
+
+        <!-- START: Forums List -->
+        <ul class="nk-forum">
+{#            <li>#}
+{#                <div class="nk-forum-icon">#}
+{#                    <span class="ion-pin"></span>#}
+{#                </div>#}
+{#                <div class="nk-forum-title">#}
+{#                    <h3><a href="forum-single-topic.html">Suggestions</a></h3>#}
+{#                    <div class="nk-forum-title-sub">Started by <a href="#">nK</a> on January 17, 2018</div>#}
+{#                </div>#}
+{#                <div class="nk-forum-count">#}
+{#                    178 posts#}
+{#                </div>#}
+{#                <div class="nk-forum-activity-avatar">#}
+{#                    <a href="forum-single-topic.html">#}
+{#                        <img src="assets/images/avatar-1.jpg" alt="Hitman">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="nk-forum-activity">#}
+{#                    <div class="nk-forum-activity-title" title="Hitman">#}
+{#                        <a href="#">Hitman</a>#}
+{#                    </div>#}
+{#                    <div class="nk-forum-activity-date">#}
+{#                        September 11, 2018#}
+{#                    </div>#}
+{#                </div>#}
+{#            </li>#}
+{#            <li class="nk-forum-locked">#}
+{#                <div class="nk-forum-icon">#}
+{#                    <span class="ion-locked"></span>#}
+{#                </div>#}
+{#                <div class="nk-forum-title">#}
+{#                    <h3><a href="forum-single-topic.html">Are you ready for 2.0 release?</a></h3>#}
+{#                    <div class="nk-forum-title-sub">Started by <a href="#">Hitman</a> on August 23, 2018</div>#}
+{#                </div>#}
+{#                <div class="nk-forum-count">#}
+{#                    3 posts#}
+{#                </div>#}
+{#                <div class="nk-forum-activity-avatar">#}
+{#                    <a href="forum-single-topic.html">#}
+{#                        <img src="assets/images/avatar-2.jpg" alt="Witch Murder">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="nk-forum-activity">#}
+{#                    <div class="nk-forum-activity-title" title="Witch Murder">#}
+{#                        <a href="#">Witch Murder</a>#}
+{#                    </div>#}
+{#                    <div class="nk-forum-activity-date">#}
+{#                        August 26, 2018#}
+{#                    </div>#}
+{#                </div>#}
+{#            </li>#}
+
+
+            {% for article in articles %}
+                <li>
+                    <div class="nk-forum-icon">
+                        <span class="ion-chatboxes"></span>
+                    </div>
+                    <div class="nk-forum-title">
+                        <h3><a href="{{ path('afficher_post_by_id', {'id': article.id}) }}">{{ article.titrearticle }}</a></h3>
+                        <div class="nk-forum-title-sub">Started by <a href="#">User</a> on {{ article.datearticle.format('d/m/y') }}</div>
+                    </div>
+{#                    <div class="nk-forum-count">#}
+{#                        {{ post.likes }} likes#}
+{#                    </div>#}
+{#                    <div class="nk-forum-activity-avatar">#}
+{#                        <a href="{{ path('modifier_post', {'id': post.id}) }}">Modifier</a>#}
+{#                        <td><a href="{{ path('supprimer_post', {'id': post.id}) }}">Supprimer</a></td>#}
+{#                            </div>#}
+{#                            <div class="nk-forum-activity">#}
+{#                                <div class="nk-forum-activity-title" title="Wolfenstein">#}
+{#                                    <a href="#">User</a>#}
+{#                                </div>#}
+{#                                <div class="nk-forum-activity-date">#}
+{#                                    {{ post.datePost.format('d/m/y') }}#}
+{#                                </div>#}
+{#                    </div>#}
+                </li>
+            {% endfor %}
+
+        </ul>
+        <!-- END: Forums List -->
+
+        <div class="nk-gap-2"></div>
+
+        <!-- START: Pagination -->
+        <div class="row">
+            <div class="col-md-3 order-md-2 text-right">
+                <a href="{{ path('ajouter_post') }}" class="nk-btn nk-btn-rounded nk-btn-color-white">New Topic</a>
+            </div>
+            <div class="col-md-9">
+                <div class="nk-pagination nk-pagination-left">
+                    <a href="#" class="nk-pagination-prev">
+                        <span class="ion-ios-arrow-back"></span>
+                    </a>
+                    <nav>
+                        <a class="nk-pagination-current" href="#">1</a>
+                    </nav>
+                    <a href="#" class="nk-pagination-next">
+                        <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END: Pagination -->
+    </div>
+
+
+
+
+
+{% endblock %}

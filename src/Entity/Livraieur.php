@@ -16,7 +16,7 @@ class Livraieur
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\ManyToOne(targetEntity=livraieur::class, inversedBy="livraisons")
+     * @ORM\ManyToOne(targetEntity=Livraieur::class, inversedBy="livraisons")
      * @ORM\Column(type="string")
      */
     private $id;

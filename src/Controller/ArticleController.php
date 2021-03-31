@@ -141,5 +141,17 @@ class ArticleController extends AbstractController
         return $this->render('article_back/stats.html.twig', array('piechart' => $bar));
     }
 
+    /**
+         * @Route("/affich_article", name="affich_article")
+     */
+    public function affich_article()
+    {
+        $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
+
+        return $this->render('article_front/afficher_article.html.twig', [
+            "articles" => $articles,
+        ]);
+    }
+
 
 }

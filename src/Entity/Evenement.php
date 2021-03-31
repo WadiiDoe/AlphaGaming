@@ -14,6 +14,7 @@ class Evenement
 {
     /**
      * @ORM\Id
+     *
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
@@ -21,20 +22,37 @@ class Evenement
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="veuillez remplir ce champs")
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters",
+     *      allowEmptyString = false
+     * )
      */
+
     private $nom;
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime",nullable=true)
+     * @Assert\Date
+     * @var string A "Y-m-d" formatted value
      */
     private $date;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="veuillez entrer la description")
      */
     private $description;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank(message="veuillez entrer le prix")
+     * @Assert\Type(
+     *     type="float",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
      */
     private $prix;
 
@@ -54,13 +72,13 @@ class Evenement
     private $latitude;
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Please upload image")
-     * @Assert\File(mimeTypes={"image/jpeg"})
+     * @Assert\NotBlank(message="veuillez insérer une image")
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer", length=255, nullable=true)
+     * @Assert\NotBlank(message="veuillez entrer la capacité")
      */
     private $nbrePlace;
 

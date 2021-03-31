@@ -181,7 +181,7 @@ Additional Classes:
 
                 <ul class="nk-nav nk-nav-right d-none d-lg-table-cell" data-nav-mobile="#nk-nav-mobile">
 
-                    <li class="{% block ajoutpostactive %}{% endblock %}{% block viewpostactive %}{% endblock %} nk-drop-item">
+                    <li class="{% block ajoutpostactive %}{% endblock %}{% block viewpostactive %}{% endblock %}{% block viewarticleactive %}{% endblock %} nk-drop-item">
                         <a>
                             Features
 
@@ -190,7 +190,8 @@ Additional Classes:
                                 <a href="forum.html">
                                     Posts
 
-                                </a><ul class="dropdown">
+                                </a>
+                                <ul class="dropdown">
 
                                     <li class="{{ block('ajoutpostactive') }}">
                                         <a href="{{ path('ajouter_post')}}">
@@ -205,6 +206,11 @@ Additional Classes:
                                         </a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="{{ block('viewarticleactive') }}">
+                                <a href="{{ path('affich_article')}}">
+                                    Articles
+                                </a>
                             </li>
                         </ul>
                     </li>

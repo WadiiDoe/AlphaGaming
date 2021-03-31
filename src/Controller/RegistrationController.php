@@ -46,7 +46,7 @@ class RegistrationController extends AbstractController
             $user->code = $random;
             $message = (new \Swift_Message('Activation du compte'))
                 // On attribue l'expéditeur
-                ->setFrom('sanadfaleh@gmail.com')
+                ->setFrom('wadii.jhinaoui@esprit.tn')
                 // On attribue le destinataire
                 ->setTo($user->getEmail())
                 // On crée le texte avec la vue

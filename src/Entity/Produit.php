@@ -17,8 +17,8 @@ class Produit
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\ManyToOne(targetEntity=client::class, inversedBy="commandes")
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="commandes")
+     * @ORM\Column(type="integer")
      */
     private $id;
 
