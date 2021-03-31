@@ -1,0 +1,63 @@
+
+
+
+{% block body %}
+
+
+
+
+
+<!--
+  Invoice template by invoicebus.com
+  To customize this template consider following this guide https://invoicebus.com/how-to-create-invoice-template/
+  This template is under Invoicebus Template License, see https://invoicebus.com/templates/license/
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Facture</title>
+
+
+    <link rel="stylesheet" href="{{asset('css/template.css')}}">
+  </head>
+  <body>
+  <h1> Facture
+  </h1>
+  <table class="dataTables_wrapper">
+    <tbody>
+
+    <tr>
+      <th>Numero de livraison</th>
+      <td>{{ livraison.numl }}</td>
+    </tr>
+    <tr>
+      <th>Date livraison</th>
+      <td>{{ livraison.dateliv ? livraison.dateliv|date('Y-m-d') : '' }}</td>
+    </tr>
+
+
+    <tr>
+      <th>Total en dinar</th>
+      <td>{{ livraison.total }}</td>
+    </tr>
+
+    <tr>
+      <th>Nom de client</th>
+      <td>{{ livraison.client.Nom }}</td>
+    </tr>
+    <tr>
+      <th>Nom de produit</th>
+      <td>{{ livraison.produit.nom }}</td>
+    </tr>
+    <tr>
+      <th>Adresse de livraison</th>
+      <td>{{ livraison.client.adrliv }}</td>
+    </tr>
+
+  </table>
+
+    <script src="http://cdn.invoicebus.com/generator/generator.min.js?data=data.js"></script>
+  </body>
+</html>
+
+{% endblock %}

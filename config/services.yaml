@@ -6,9 +6,13 @@
 parameters:
     EventImage_directory: '%kernel.project_dir%/public/Uploads/Image'
     upload_destination: '%kernel.project_dir%/public/images/products'
+    images_directory: '%kernel.project_dir%/public/uploads/images'
 
 
 services:
+    App\Service\FileUploader:
+        arguments:
+            $targetDirectory: '%kernel.project_dir%/public/uploads/images%'
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.

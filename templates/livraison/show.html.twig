@@ -1,0 +1,51 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Livraison{% endblock %}
+
+{% block body %}
+    <h1>Livraison</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ livraison.id }}</td>
+            </tr>
+            <tr>
+                <th>Numl</th>
+                <td>{{ livraison.numl }}</td>
+            </tr>
+            <tr>
+                <th>Date livraison</th>
+                <td>{{ livraison.dateliv ? livraison.dateliv|date('Y-m-d') : '' }}</td>
+            </tr>
+
+
+            <tr>
+                <th>Total</th>
+                <td>{{ livraison.total }}</td>
+            </tr>
+
+            <tr>
+                <th>Nom de client</th>
+                <td>{{ livraison.client.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Nom de produit</th>
+                <td>{{ livraison.produit.nom }}</td>
+            </tr>
+            <tr>
+                <th>adresse de livraision</th>
+                <td>{{ livraison.client.adrliv }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('livraison_index') }}"class="btn-success">back to list</a>
+
+    <a href="{{ path('livraison_edit', {'id': livraison.id}) }}"class="btn-danger">edit</a>
+    <br>
+    <a href="{{ path('livraison_facture', {'id': livraison.id}) }}"class="btn-success float right">Facture</a>
+
+    {{ include('livraison/_delete_form.html.twig') }}
+{% endblock %}

@@ -98,6 +98,11 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ path('admin_add_jeux') }}">Ajouter un jeux</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ path('admin_show_jeux') }}">afficher les jeux</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('client_index')}}">Client</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('produit_index')}}">Produit</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('commande_index')}}">Commande</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('livraieur_index')}}">Livraieur</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('livraison_index')}}">Livraison</a></li>
                     </ul>
                 </div>
             </li>
@@ -130,6 +135,23 @@
                         <li class="nav-item"> <a class="nav-link" href="{{ path('ajouter_article') }}">Ajouter Article</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ path('afficher_article') }}">Afficher Article</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ path('statistics') }}">Stats</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+                    <span class="menu-title">Pages d'utilisateur</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="auth">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('product')}}"> Produits </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('client_new')}}"> Ajouter un Client </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('contact')}}"> Contact </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ path('checkout')}}"> Checkout </a></li>
                     </ul>
                 </div>
             </li>

@@ -1,0 +1,23 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}New Livraision{% endblock %}
+
+{% block body %}
+    <h1>Create new Livraison</h1>
+
+
+    {{ form_start(form) }}
+
+    {{ form_widget(form) }}
+
+
+    <button class="btn btn-success">{{ button_label|default('Save') }}</button>
+    {{ form_end(form) }}
+
+
+
+
+    <a href="{{ path('livraison_index') }}"class="btn-danger">back to list</a>
+    
+{% endblock %}
+

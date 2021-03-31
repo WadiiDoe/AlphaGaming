@@ -1,0 +1,11 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}New Livraieur{% endblock %}
+
+{% block body %}
+    <h1>Create new Livraieur</h1>
+
+    {{ include('livraieur/_form.html.twig') }}
+
+    <a href="{{ path('livraieur_index') }}"class="btn-success">back to list</a>
+{% endblock %}

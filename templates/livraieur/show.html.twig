@@ -1,0 +1,38 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Livraieur{% endblock %}
+
+{% block body %}
+    <h1>Livraieur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ livraieur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ livraieur.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ livraieur.Prenom }}</td>
+            </tr>
+            <tr>
+                <th>tel</th>
+                <td>{{ livraieur.tel }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ livraieur.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('livraieur_index') }}"class="btn-success">back to list</a>
+
+    <a href="{{ path('livraieur_edit', {'id': livraieur.id}) }}"class="btn-danger">edit</a>
+
+    {{ include('livraieur/_delete_form.html.twig') }}
+{% endblock %}

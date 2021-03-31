@@ -1,0 +1,41 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Livraieur index{% endblock %}
+
+{% block body %}
+    <h1>Livraieur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Tel</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for livraieur in livraieurs %}
+            <tr>
+                <td>{{ livraieur.id }}</td>
+                <td>{{ livraieur.Nom }}</td>
+                <td>{{ livraieur.Prenom }}</td>
+                <td>{{ livraieur.tel }}</td>
+                <td>{{ livraieur.email }}</td>
+                <td>
+                    <a href="{{ path('livraieur_show', {'id': livraieur.id}) }}"class="btn-success">show</a>
+                    <a href="{{ path('livraieur_edit', {'id': livraieur.id}) }}"class="btn-success">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('livraieur_new') }}"class="btn-success">Create new</a>
+{% endblock %}
